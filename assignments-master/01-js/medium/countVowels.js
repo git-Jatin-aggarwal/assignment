@@ -7,6 +7,47 @@
 
 function countVowels(str) {
     // Your code here
+
+    const vowel = str.toLowerCase()
+
+    const lower = [...vowel]
+   
+    let totalVowel = 0
+ 
+    lower.forEach(element =>{
+      if(element == "a"){
+ 
+         totalVowel = totalVowel +1
+      }
+      else if(
+         element == "e"
+      ){
+         totalVowel = totalVowel +1
+ 
+      } else if(
+         element == "i"
+      ){
+         totalVowel = totalVowel +1
+ 
+      } else if(
+         element == "o"
+      ){
+         totalVowel = totalVowel +1
+ 
+      } else if(
+         element == "u"
+      ){
+         totalVowel = totalVowel +1
+ 
+      }
+ 
+ 
+ 
+ 
+    })
+  
+    return totalVowel
+   
 }
 
 module.exports = countVowels;
