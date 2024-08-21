@@ -9,14 +9,22 @@ let requestCount = 0;
 // Your task is to create a global middleware (app.use) which will
 // maintain a count of the number of requests made to the server in the global
 // requestCount variable
+// app.use(
+// function (req ,res ,next){
+// //  let count = 0
+// //   count = count + 1
 
-function numberOfRequest(req ,res ,next){
-  count = 0
-  count++ 
-  next()
-}
+//      requestCount = requestCount + 1;
 
-app.use()
+//   next()
+// })
+
+
+
+app.use(function(req, res, next) {
+  requestCount = requestCount + 1;
+  next();
+});
 
 app.get('/user', function(req, res) {
   res.status(200).json({ name: 'john' });
